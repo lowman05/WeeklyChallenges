@@ -1,4 +1,7 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.Design;
+using System.Security.Cryptography;
 
 namespace ChallengesWithTestsMark8
 {
@@ -16,34 +19,54 @@ namespace ChallengesWithTestsMark8
             }
         }
 
-        public double Subtract(double minuend, double subtrahend)
+        public double Subtract(double minuend, double subrtrahend)
         {
-            throw new NotImplementedException();
+            double diff;
+            diff = (minuend - subrtrahend);
+            return diff;
         }
 
         public int Add(int number1, int number2)
         {
-            throw new NotImplementedException();
+            int sum;
+            sum = (number1 + number2);
+            return sum;
         }
 
         public int GetSmallestNumber(int number1, int number2)
         {
-            throw new NotImplementedException();
+            int min;
+            min = Math.Min(number1, number2);
+            return min;
         }
 
         public long Multiply(long factor1, long factor2)
         {
-            throw new NotImplementedException();
+            long multiple;
+            multiple = factor1 * factor2;
+            return multiple;
         }
 
         public string GetGreeting(string nameOfPerson)
         {
-            throw new NotImplementedException();
-        }
+            string greeting = ($"Hello, {nameOfPerson}!");
 
+            if (nameOfPerson == "")
+            {
+                return ("Hello!");
+            }
+            else
+            {
+                return greeting; 
+            }
+            
+            
+          
+        }
         public string GetHey()
         {
-            throw new NotImplementedException();
+            string howdy = "HEY!";
+            return howdy;
         }
     }
 }
